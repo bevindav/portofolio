@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bev's</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #e0f2f7; 
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #0079a1;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #005f7c;
+        }
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #004c63;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .intro, .projects, .contact {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .intro h2, .projects h2, .contact h2 {
+            border-bottom: 2px solid #0079a1;
+            padding-bottom: 5px;
+        }
+        .project-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 5px #aaa;
+        }
+        .project-item h3 {
+            margin-top: 0;
+            color: #2a2a2a;
+        }
+        .github-link {
+            display: inline-block;
+            background-color: #005f7c; 
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .github-link:hover {
+            background-color: #004c63; 
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #0079a1; 
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        #profile-image {
+            width: 150px;
+            height: 150px;
+            background-color: #a0c2e3; 
+            border: 3px solid #0079a1; 
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: block;
+        }
+        .contact-info a {
+            color: #0079a1; 
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bevinda Vivian</h1>
+        <p>Third Year Computer Science Student at Bandung Institute of Technology</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+        <section id="about" class="intro">
+            <h2>About Me</h2>
+            <img id="profile-image" src="bev.jpg" alt="Bevinda Vivian">
+            <p>
+                Hello! I'm Bevinda Vivian, a student at ITB. I'm currently on a journey to learn and wanted to explore Cyber Security. This portfolio is a place for me to gather my coursework,
+                which may not be perfect, but I'm very proud of every step of the process.
+                I'm still learning and experimenting.
+            </p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <p>Here are some of the coursework assignments I've worked on. This is still an early stage, so please understand if the code has room for improvement!</p>
+
+            <div class="project-item">
+                <h3>Noise Source Detection Using BFS, DFS, and A* Graph Traversal Algorithms</h3>
+                <p>Implementation of BFS, DFS, and A* graph search algorithms in Java with Swing GUI and audio integration to detect noise sources.</p>
+                <a href="https://github.com/bevindav" target="_blank" class="https://github.com/bevindav/noise-source-detection">View on GitHub</a>
+            </div>
+
+            <div class="project-item">
+                <h3>CV-Applicant-Tracking-System</h3>
+                <p>Applicant tracking system designed to efficiently process and manage resumes.</p>
+                <a href="https://github.com/bevindav" target="_blank" class="https://github.com/bevindav/CV-Applicant-Tracking-System">View on GitHub</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Rush Hour Solver</h3>
+                <p>Project to solve the Rush Hour puzzle using search algorithms.</p>
+                <a href="https://github.com/bevindav" target="_blank" class="https://github.com/bevindav/Tucil3_13523120">View on GitHub</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Little-Alchemy-2-Recipe-Finder</h3>
+                <p>Tool to help find recipes in the game Little Alchemy 2.</p>
+                <a href="https://github.com/bevindav" target="_blank" class="https://new-minekrep.vercel.app/">View on Vercel App</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Quadtree image compression</h3>
+                <p>Project exploring image compression using the Quadtree data structure.</p>
+                <a href="https://github.com/bevindav" target="_blank" class="https://github.com/bevindav/Tucil2_13523120_13523138">View on GitHub</a>
+            </div>
+
+            <div class="project-item">
+                <h3>IQ Puzzler Pro Solver</h3>
+                <p>Project to solve IQ Puzzler Pro board game.</p>
+                <a href="https://github.com/bevindav" target="_blank" class="https://github.com/bevindav/Tucil1_13523120">Lihat di GitHub</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Waste-Collection-Route-ITB-Ganesha</h3>
+                <p>Simulation to determine the most efficient waste collection route in the ITB Ganesha area.</p>
+                <a href="https://github.com/bevindav" target="_blank" class="https://github.com/bevindav/Waste-Collection-Route-ITB-Ganesha">View on GitHub</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Nest</h3>
+                <p>Application designed as a tool to manage projects and tasks, serving users who want to plan and organize their daily activities in a more structured and efficient way.</p>
+                <a href="https://github.com/bevindav" target="_blank" class="https://github.com/bevindav/IF2150-2024-K02-G12-NEST">View on GitHub</a>
+            </div>
+            <div class="project-item">
+                <h3>Camel Up</h3>
+                <p>Camel Up Board Game implemented using Prolog.</p>
+                <a href="https://github.com/bevindav" target="_blank" class="https://github.com/bevindav/Camel-Up-Prolog-praktikum-logika-komputasional">View on GitHub</a>
+            </div>
+
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Kontak</h2>
+            <p class="contact-info">
+                Contact me on:
+                <br>
+                Email: <a href="mailto:13523120@std.stei.itb.ac.id">13523120@std.stei.itb.ac.id</a>
+                <br>
+                Instagram: <a href="https://www.instagram.com/vivianbevinda" target="_blank">vivianbevinda</a>
+                <br>
+                GitHub: <a href="https://github.com/bevindav" target="_blank">bevindav</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>2025</p>
+    </footer>
+
+</body>
+</html>
