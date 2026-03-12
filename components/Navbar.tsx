@@ -32,6 +32,11 @@ export default function Navbar() {
             </a>
           </li>
           <li>
+            <a href="#gallery" onClick={handleLinkClick}>
+              Gallery
+            </a>
+          </li>
+          <li>
             <a href="#projects" onClick={handleLinkClick}>
               Projects
             </a>

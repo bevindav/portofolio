@@ -7,7 +7,7 @@ export default function Footer() {
     <footer>
       <div className="container">
         <p>
-          © {currentYear} {portfolioData.name} — Made with <i className="fas fa-heart"></i>
+          © {currentYear} {portfolioData.name} 
         </p>
       </div>
     </footer>
