@@ -33,7 +33,7 @@ export default function Gallery() {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Album</h2>
-          <p className="section-subtitle">Moments captured through time</p>
+          <p className="section-subtitle">Some memorable moments for me :) </p>
         </div>
 
         <div className="gallery-wrapper">
