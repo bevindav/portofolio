@@ -11,9 +11,36 @@ export default function Navbar() {
       setScrolled(window.scrollY > 50)
     }
 
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setMobileMenuOpen(false)
+      }
+    }
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMobileMenuOpen(false)
+      }
+    }
+
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('keydown', handleEscape)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('keydown', handleEscape)
+    }
   }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : ''
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileMenuOpen])
 
   const handleLinkClick = () => {
     setMobileMenuOpen(false)
@@ -25,7 +52,7 @@ export default function Navbar() {
         <a href="#" className="logo">
           bev<span>.</span>
         </a>
-        <ul className={mobileMenuOpen ? 'active' : ''}>
+        <ul id="main-navigation" className={mobileMenuOpen ? 'active' : ''}>
           <li>
             <a href="#about" onClick={handleLinkClick}>
               About
@@ -51,12 +78,19 @@ export default function Navbar() {
           className="mobile-menu-btn"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="main-navigation"
         >
           <span style={mobileMenuOpen ? { transform: 'rotate(45deg) translate(5px, 5px)' } : {}}></span>
           <span style={mobileMenuOpen ? { opacity: '0' } : {}}></span>
           <span style={mobileMenuOpen ? { transform: 'rotate(-45deg) translate(5px, -5px)' } : {}}></span>
         </button>
       </div>
+      <button
+        className={mobileMenuOpen ? 'nav-overlay active' : 'nav-overlay'}
+        onClick={handleLinkClick}
+        aria-label="Close navigation menu"
+      ></button>
     </nav>
   )
 }

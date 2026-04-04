@@ -150,6 +150,10 @@ nav ul a:hover {
     transition: var(--transition);
 }
 
+.nav-overlay {
+    display: none;
+}
+
 #hero {
     min-height: 100vh;
     display: flex;
@@ -743,6 +747,15 @@ nav ul a:hover {
     position: relative;
 }
 
+.project-link-private {
+    color: var(--text-muted);
+    cursor: default;
+}
+
+.project-link-private::after {
+    display: none;
+}
+
 .project-link::after {
     content: '';
     position: absolute;
@@ -762,9 +775,10 @@ nav ul a:hover {
     display: flex;
     gap: 1.2rem;
     margin-top: auto;
+    flex-wrap: wrap;
 }
 
-.project-links-row a {
+.project-links-row .project-link {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -776,7 +790,7 @@ nav ul a:hover {
     position: relative;
 }
 
-.project-links-row a::after {
+.project-links-row .project-link::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -788,13 +802,18 @@ nav ul a:hover {
 }
 
 .project-link:hover,
-.project-links-row a:hover {
+.project-links-row .project-link:hover {
     color: var(--accent-cyan);
     transform: translateX(3px);
 }
 
-.project-links-row a:hover::after {
+.project-links-row .project-link:hover::after {
     width: 100%;
+}
+
+.project-link-private:hover {
+    color: var(--text-muted);
+    transform: none;
 }
 
 .contact-cards {
@@ -971,6 +990,23 @@ footer i {
         right: 0;
     }
 
+    .nav-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+        border: 0;
+        z-index: 998;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
     nav ul a {
         font-size: 1.1rem;
     }
@@ -999,6 +1035,14 @@ footer i {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-body {
+        padding: 1.3rem;
+    }
+
+    .project-links-row {
+        gap: 0.8rem;
     }
 
     .contact-cards {

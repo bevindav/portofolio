@@ -28,6 +28,72 @@ export const portfolioData = {
   ],
   projects: [
     {
+      title: 'Marketplace Web Application',
+      tag: 'Web Based App Dev • 2025',
+      image: '/assets/nimons.gif',
+      desc: 'Marketplace web app with buyer and seller role-based access, search and filter product, cart, order tracking, balance simulation, auction, chat, admin panel, and responsive UI.',
+      tech: [
+        { icon: 'fab fa-php', label: 'PHP' },
+        { icon: 'fab fa-react', label: 'React' },
+        { icon: 'fas fa-database', label: 'PostgreSQL' },
+        { icon: 'fab fa-docker', label: 'Docker' },
+      ],
+      links: [
+        { label: 'Private Repository', icon: 'fas fa-lock', private: true },
+      ],
+    },
+    {
+      title: 'Pascal Analyzer using C++',
+      tag: 'Teori Bahasa Formal dan Otomata • 2025',
+      image: '/assets/tbfo.png',
+      desc: 'Lexical analyzer, syntax parser, and semantic analyzer for the Pascal programming language.',
+      tech: [
+        { icon: 'fas fa-code', label: 'C++' },
+      ],
+      links: [
+        { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/ahsuunn/NTB-Tubes-IF2224' },
+      ],
+    },
+    {
+      title: 'AI - Training Use Logres, DTL, SVM',
+      tag: 'AI • 2025',
+      image: '/assets/kaggle.png',
+      desc: 'Project to predict about student academics outcome (Dropout, Enrolled, Graduate) using Logistic Regression, Decision Tree, and Support Vector Machines, from scratch dan scikit-learn.',
+      tech: [
+        { icon: 'fab fa-python', label: 'Python' },
+        { icon: 'fas fa-brain', label: 'Machine Learning' },
+      ],
+      links: [
+        { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/barruadi/MindRegression-AI-2' },
+      ],
+    },
+    {
+      title: 'FFNN From Scratch',
+      tag: 'Machine Learning • 2026',
+      image: '/assets/ffnn.png',
+      desc: 'Feedforward Neural Network from scratch using Python and NumPy (Machine Learning project).',
+      tech: [
+        { icon: 'fab fa-python', label: 'Python' },
+        { icon: 'fas fa-network-wired', label: 'NumPy' },
+      ],
+      links: [
+        { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/farrelathalla/Tubes1ML-KasihKeras' },
+      ],
+    },
+    {
+      title: 'Mini Database Management System',
+      tag: 'Sistem Basis Data • 2025',
+      image: '/assets/sbd.png',
+      desc: 'Mini DBMS including query processor, query executor, query optimizer, storage manager, and transaction manager project.',
+      tech: [
+        { icon: 'fas fa-database', label: 'Database Systems' },
+        { icon: 'fas fa-database', label: 'PostgreSQL' },
+      ],
+      links: [
+        { label: 'Private Repository', icon: 'fas fa-lock', private: true },
+      ],
+    },
+    {
       title: 'x86 Operating System',
       tag: 'maknyOS',
       image: '/assets/operatingsystem.gif',
@@ -37,7 +103,7 @@ export const portfolioData = {
         { icon: 'fas fa-microchip', label: 'Assembly x86' },
       ],
       links: [
-        { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/bevindav/os-2025-maknyos' },
+        { label: 'Private Repository', icon: 'fas fa-lock', private: true },
       ],
     },
     {
@@ -151,7 +217,7 @@ export const portfolioData = {
         { icon: 'fas fa-brain', label: 'Prolog' },
       ],
       links: [
-        { label: 'GitHub', icon: 'fab fa-github', url: 'https://github.com/bevindav/Camel-Up-Prolog-praktikum-logika-komputasional' },
+        { label: 'Private Repository', icon: 'fas fa-lock', private: true },
       ],
     },
   ],
