@@ -70,30 +70,40 @@ export default function Projects() {
                   </div>
                 )}
                 {project.links.length === 1 ? (
-                  project.links[0].private ? (
+                  'private' in project.links[0] && project.links[0].private ? (
                     <span className="project-link project-link-private">
                       <i className={project.links[0].icon}></i>
                       {project.links[0].label}
                     </span>
-                  ) : (
+                  ) : 'url' in project.links[0] ? (
                     <a href={project.links[0].url} target="_blank" rel="noopener noreferrer" className="project-link">
                       <i className={project.links[0].icon}></i>
                       {project.links[0].label}
                     </a>
+                  ) : (
+                    <span className="project-link project-link-private">
+                      <i className={project.links[0].icon}></i>
+                      {project.links[0].label}
+                    </span>
                   )
                 ) : (
                   <div className="project-links-row">
                     {project.links.map((link, linkIndex) => (
-                      link.private ? (
+                      'private' in link && link.private ? (
                         <span key={linkIndex} className="project-link project-link-private">
                           <i className={link.icon}></i>
                           {link.label}
                         </span>
-                      ) : (
+                      ) : 'url' in link ? (
                         <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="project-link">
                           <i className={link.icon}></i>
                           {link.label}
                         </a>
+                      ) : (
+                        <span key={linkIndex} className="project-link project-link-private">
+                          <i className={link.icon}></i>
+                          {link.label}
+                        </span>
                       )
                     ))}
                   </div>
